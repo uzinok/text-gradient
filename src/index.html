@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-  <include src="src/template/head.html"></include>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Текст с градиентом</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div style="display: none;">
-    <include src="resource/svg/sprite.svg"></include>
-  </div>
-  <include src="src/template/header.html"></include>
-  <main>
+  
+  <p class="gradient-text">Градиентный текст</p>
 
-    <h2>Hello</h2>
-    <svg width="300" class="footer-developer-link__img" role="img">
-      <use xlink:href="#cat-logo"></use>
-    </svg>
-    <img width="300" src="img/img.jpg" alt="#">
+  <svg width="635" viewBox="0 0 635 75" xmlns="http://www.w3.org/2000/svg" style="transform: translateX(7px);">
+    <defs>
+      <linearGradient id="Gradient1">
+        <stop class="stop1" offset="33%"/>
+        <stop class="stop2" offset="66%"/>
+        <stop class="stop3" offset="100%"/>
+      </linearGradient>
 
-    <include src="src/template/footer.html"></include>
-  </main>
+      <style type="text/css">
+        #rect1 { fill: url(#Gradient1); }
+        .stop1 { stop-color: #0B2349; }
+        .stop2 { stop-color: #0D61BC; }
+        .stop3 { stop-color: #8AA9D6; }
+      </style>
+    </defs>
+
+    <text id="rect1" x="0" y="45">Градиентный текст</text>
+  </svg>
+  
 </body>
-
 </html>
